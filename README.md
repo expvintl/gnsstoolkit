@@ -1,5 +1,7 @@
 # GNSS 工具箱
 
+简体中文 | [English](README.en.md)
+
 一个 Material 3 风格的安卓 GNSS 工具集，面向需要看**原始卫星数据**而不只是「一个坐标」的人。
 定位数据全部来自系统的 `LocationManager` / `GnssStatus` / NMEA，不依赖 Google Play 服务，因此在没有 GMS 的设备上也能完整工作。
 
@@ -39,16 +41,14 @@ export JAVA_HOME=/path/to/jdk
 
 ## 发布
 
-仓库自带两条 GitHub Actions：
+- `.github/workflows/release.yml`：push 到 `main`（或在 Actions 页面手动触发）即编译 release 版，并更新仓库里固定的 `latest` 发布，覆盖旧资产。
+- `.github/workflows/ci.yml`：PR 时编译调试版并上传 APK 工件。
 
-- `.github/workflows/ci.yml`：每次 push / PR 编译调试版并上传 APK 工件。
-- `.github/workflows/release.yml`：推送 `v*` 标签（或在 Actions 页面手动触发）后编译 release 版，自动创建 GitHub Release 并附上 APK 与 `SHA256SUMS.txt`。
+版本号自动取 `1.0.<运行序号>`，不需要手动打标签。下载地址固定不变：
 
-```bash
-git tag v1.0.0 && git push origin v1.0.0   # 触发发布
 ```
-
-版本号由标签决定：标签 `v1.2.3` → `versionName=1.2.3`，`versionCode` 取 CI 的运行序号。
+https://github.com/expvintl/gnsstoolkit/releases/latest/download/gnsstoolkit-latest.apk
+```
 
 ## 技术栈
 
