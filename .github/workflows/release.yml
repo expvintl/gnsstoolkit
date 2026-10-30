@@ -1,0 +1,95 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: '要发布的 tag，例如 v1.0.0'
+        required: true
+        default: 'v1.0.0'
+      prerelease:
+        description: '标记为预发布'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - uses: android-actions/setup-android@v3
+
+      - name: 安装 SDK 组件
+        run: sdkmanager --install "platforms;android-35" "build-tools;35.0.0" > /dev/null
+
+      - name: 解析版本号
+        id: ver
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG="${{ inputs.tag }}"
+          else
+            TAG="${GITHUB_REF_NAME}"
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "name=${TAG#v}" >> "$GITHUB_OUTPUT"
+          echo 发布 $TAG
+
+      - name: 构建 release APK
+        run: |
+          chmod +x gradlew
+          ./gradlew :app:assembleRelease --no-daemon --stacktrace \
+            -PappVersionName=${{ steps.ver.outputs.name }} \
+            -PappVersionCode=${{ github.run_number }}
+
+      - name: 打包产物
+        run: |
+          mkdir -p dist
+          cp app/build/outputs/apk/release/app-release.apk \
+             "dist/gnsstoolkit-${{ steps.ver.outputs.name }}.apk"
+          cd dist && sha256sum ./*.apk > SHA256SUMS.txt && cat SHA256SUMS.txt
+
+      - name: 发布
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.ver.outputs.tag }}
+          name: GNSS 工具箱 ${{ steps.ver.outputs.name }}
+          draft: false
+          prerelease: ${{ inputs.prerelease || false }}
+          generate_release_notes: true
+          files: |
+            dist/gnsstoolkit-${{ steps.ver.outputs.name }}.apk
+            dist/SHA256SUMS.txt
+          body: |
+            ## 安装
+
+            下载 `gnsstoolkit-${{ steps.ver.outputs.name }}.apk`，在手机上允许「安装未知来源应用」后直接安装。
+
+            ```bash
+            adb install -r gnsstoolkit-${{ steps.ver.outputs.name }}.apk
+            ```
+
+            要求 Android 8.0（API 26）及以上。
+
+            > 该 APK 使用 debug 证书签名，适合自签名安装与测试；如需上架请自行配置 keystore。
+
+            ## 校验
+
+            ```bash
+            sha256sum -c SHA256SUMS.txt
+            ```
+
+            ## 变更
+
+            见下方自动生成的提交列表。

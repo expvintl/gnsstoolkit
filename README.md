@@ -37,6 +37,19 @@ export JAVA_HOME=/path/to/jdk
 
 `release` 目前用 debug 证书签名，便于自签名安装验证；正式分发时请换成自己的 keystore。
 
+## 发布
+
+仓库自带两条 GitHub Actions：
+
+- `.github/workflows/ci.yml`：每次 push / PR 编译调试版并上传 APK 工件。
+- `.github/workflows/release.yml`：推送 `v*` 标签（或在 Actions 页面手动触发）后编译 release 版，自动创建 GitHub Release 并附上 APK 与 `SHA256SUMS.txt`。
+
+```bash
+git tag v1.0.0 && git push origin v1.0.0   # 触发发布
+```
+
+版本号由标签决定：标签 `v1.2.3` → `versionName=1.2.3`，`versionCode` 取 CI 的运行序号。
+
 ## 技术栈
 
 Kotlin 2.1 · Jetpack Compose（Material 3）· 单 Activity + 自管理导航 · DataStore Preferences · 无第三方定位库。

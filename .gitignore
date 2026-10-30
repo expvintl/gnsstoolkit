@@ -33,3 +33,6 @@ keystore.properties
 
 # 临时 GitHub 令牌（不入库）
 .gh_token
+
+# 本机构建脚本
+local-build.sh
