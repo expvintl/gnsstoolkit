@@ -1,0 +1,266 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">GNSS Toolkit</string>
+
+    <!-- Navigation -->
+    <string name="nav_sky">Sky</string>
+    <string name="nav_signal">Signal</string>
+    <string name="nav_location">Location</string>
+    <string name="nav_compass">Compass</string>
+    <string name="nav_status">Status</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_log">Data log</string>
+
+    <!-- Common -->
+    <string name="satellites_used">in use</string>
+    <string name="satellites_visible">visible</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="altitude">Altitude</string>
+    <string name="speed_toggle">Switch speed unit</string>
+    <string name="speed">Speed</string>
+    <string name="heading">Heading</string>
+    <string name="accuracy_horizontal">Horizontal accuracy</string>
+    <string name="accuracy_vertical">Vertical accuracy</string>
+    <string name="time_utc">UTC time</string>
+    <string name="time_local">Local time</string>
+    <string name="timezone">Time zone</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="no_fix">No fix</string>
+    <string name="acquiring">Acquiring satellites…</string>
+    <string name="copy">Copy</string>
+    <string name="copied">Copied to clipboard</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+    <string name="close">Close</string>
+    <string name="cancel">Cancel</string>
+    <string name="unknown">Unknown</string>
+    <string name="not_available">Not available</string>
+
+    <!-- Permission -->
+    <string name="permission_title">Location permission needed</string>
+    <string name="permission_body">GNSS Toolkit reads satellite and position data from the device GNSS chip. All data stays on this device and is never uploaded.</string>
+    <string name="permission_button">Grant permission</string>
+    <string name="permission_settings">Open system settings</string>
+    <string name="permission_denied">Location access was denied. Enable it in system settings to continue.</string>
+
+    <!-- Sky -->
+    <string name="sky_caption">Satellite positions by azimuth and elevation</string>
+    <string name="sky_north">N</string>
+    <string name="sky_east">E</string>
+    <string name="sky_south">S</string>
+    <string name="sky_west">W</string>
+    <string name="sky_elevation_30">30°</string>
+    <string name="sky_elevation_60">60°</string>
+    <string name="sky_tap_hint">Tap a satellite for details</string>
+    <string name="satellite_details">Satellite</string>
+    <string name="satellite_azimuth">Azimuth</string>
+    <string name="satellite_elevation">Elevation</string>
+    <string name="satellite_cn0">C/N₀</string>
+    <string name="satellite_band">Band</string>
+    <string name="satellite_used">Used in fix</string>
+    <string name="satellite_ephemeris">Ephemeris</string>
+    <string name="satellite_almanac">Almanac</string>
+    <string name="satellite_baseline">Signal baseline</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- Signal -->
+    <string name="signal_caption">C/N₀ per satellite, strongest first</string>
+    <string name="signal_average">Average</string>
+    <string name="signal_strongest">Strongest</string>
+    <string name="signal_elevation_short">El</string>
+    <string name="signal_empty">Waiting for satellite data…</string>
+
+    <!-- Location -->
+    <string name="location_caption">Position, motion and time</string>
+    <string name="dop_title">Dilution of precision</string>
+    <string name="dop_hdop">HDOP</string>
+    <string name="dop_pdop">PDOP</string>
+    <string name="dop_vdop">VDOP</string>
+    <string name="dop_hint">Lower is better</string>
+    <string name="ttff">Time to first fix</string>
+    <string name="fix_time">Fix time</string>
+    <string name="provider">Provider</string>
+    <string name="quality_excellent">Excellent</string>
+    <string name="quality_good">Good</string>
+    <string name="quality_fair">Fair</string>
+    <string name="quality_poor">Poor</string>
+    <string name="quality_bad">Bad</string>
+    <string name="location_empty">Waiting for a position fix. Move to an open sky area.</string>
+    <string name="altitude_msl">Altitude (MSL)</string>
+
+    <!-- Compass -->
+    <string name="compass_caption">Device heading from the magnetometer</string>
+    <string name="compass_magnetic">Magnetic</string>
+    <string name="compass_true">True</string>
+    <string name="compass_gps_course">GPS course</string>
+    <string name="compass_declination">Declination</string>
+    <string name="compass_sensor_accuracy">Sensor accuracy</string>
+    <string name="compass_accuracy_high">High</string>
+    <string name="compass_accuracy_medium">Medium</string>
+    <string name="compass_accuracy_low">Low</string>
+    <string name="compass_accuracy_unreliable">Unreliable</string>
+    <string name="compass_unavailable">No compass sensor on this device</string>
+    <string name="compass_calibration_hint">Move the device in a figure eight to improve accuracy</string>
+
+    <!-- Status -->
+    <string name="status_caption">Engine, device and logging</string>
+    <string name="capabilities">Device capabilities</string>
+    <string name="capability_dual_frequency">Dual frequency</string>
+    <string name="capability_nav_messages">Navigation messages</string>
+    <string name="capability_antenna">Antenna info</string>
+    <string name="capability_measurements">Raw measurements</string>
+    <string name="capabilities_unavailable">Requires Android 12 or newer</string>
+    <string name="agps">Assisted GPS</string>
+    <string name="agps_description">Asks the platform to download fresh assistance data. Useful when the first fix takes too long.</string>
+    <string name="agps_request">Request assistance data</string>
+    <string name="agps_sent">Assistance data requested</string>
+    <string name="engine_status">Engine</string>
+    <string name="engine_running">Tracking</string>
+    <string name="engine_stopped">Stopped</string>
+    <string name="engine_ttff">Time to first fix</string>
+    <string name="engine_nmea">NMEA sentences</string>
+    <string name="log_section">Data logging</string>
+
+    <!-- Log -->
+    <string name="log_title">Data log</string>
+    <string name="log_caption">Recorded sessions</string>
+    <string name="log_start">Start recording</string>
+    <string name="log_stop">Stop recording</string>
+    <string name="log_recording">Recording…</string>
+    <string name="log_idle_title">Track recording</string>
+    <string name="log_points">%1$d points</string>
+    <string name="log_format">Track format</string>
+    <string name="log_format_gpx">GPX</string>
+    <string name="log_format_kml">KML</string>
+    <string name="log_format_csv">CSV</string>
+    <string name="log_format_gpx_desc">Standard GPS Exchange track. Imports into Strava, OsmAnd, Garmin Connect, Google Earth and most mapping tools.</string>
+    <string name="log_format_kml_desc">Universal OGC KML with the route as a single LineString. Opens in any KML viewer; use GPX if you need a timestamp per point.</string>
+    <string name="log_format_csv_desc">Plain table of position, motion, DOP and satellite counts, for spreadsheet analysis.</string>
+    <string name="log_points_distance">%1$d points · %2$s</string>
+    <string name="track_sampling">Recording rate</string>
+    <string name="track_sampling_adaptive">Adaptive</string>
+    <string name="track_sampling_adaptive_desc">Skips points while you stand still, keeps even spacing while moving. Smallest files, recommended.</string>
+    <string name="track_sampling_1s">1 s</string>
+    <string name="track_sampling_1s_desc">One point every second. Highest detail, largest files — best for short tests.</string>
+    <string name="track_sampling_5s">5 s</string>
+    <string name="track_sampling_5s_desc">One point every 5 seconds. Good balance for walking and cycling.</string>
+    <string name="track_sampling_10s">10 s</string>
+    <string name="track_sampling_10s_desc">One point every 10 seconds. Compact tracks for long journeys.</string>
+    <string name="track_sampling_30s">30 s</string>
+    <string name="track_sampling_30s_desc">One point every 30 seconds. Smallest fixed rate, for day-long trips.</string>
+    <string name="log_empty">No recordings yet</string>
+    <string name="log_lines">lines</string>
+    <string name="log_delete_title">Delete recording?</string>
+    <string name="log_delete_body">The file will be removed from this device.</string>
+    <string name="log_storage_hint">Files are stored in app storage under logs/</string>
+
+    <!-- Settings -->
+    <string name="appearance">Appearance</string>
+    <string name="theme">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="dynamic_color">Dynamic color</string>
+    <string name="dynamic_color_summary">Derive colors from the wallpaper (Android 12+)</string>
+    <string name="amoled">Pure black</string>
+    <string name="amoled_summary">Use true black surfaces in dark theme</string>
+    <string name="units">Units</string>
+    <string name="units_metric">Metric</string>
+    <string name="units_imperial">Imperial</string>
+    <string name="units_nautical">Nautical</string>
+    <string name="constellations_title">Constellations</string>
+    <string name="constellations_summary">Hide constellations you do not want to see in the sky view and signal list.</string>
+    <string name="display">Display</string>
+    <string name="keep_screen_on">Keep screen on</string>
+    <string name="keep_screen_on_summary">Prevents the screen from sleeping while tracking</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="about_body">A modern, Material 3 GNSS toolbox: sky view, signal strength, position, compass and logging. All processing happens on device.</string>
+    <string name="data_privacy">No analytics, no tracking, no network access except optional assistance data.</string>
+
+    <!-- Units -->
+    <string name="unit_meter">m</string>
+    <string name="unit_kilometer">km</string>
+    <string name="unit_foot">ft</string>
+    <string name="unit_mile">mi</string>
+    <string name="unit_nautical_mile">nmi</string>
+    <string name="unit_kmh">km/h</string>
+    <string name="unit_mph">mph</string>
+    <string name="unit_knot">kn</string>
+    <string name="unit_mps">m/s</string>
+    <string name="unit_dbhz">dB-Hz</string>
+    <string name="unit_degree">°</string>
+    <string name="unit_mhz">MHz</string>
+
+    <!-- Demo -->
+    <string name="moon_section">Moon</string>
+    <string name="moon_new">New moon</string>
+    <string name="moon_waxing_crescent">Waxing crescent</string>
+    <string name="moon_first_quarter">First quarter</string>
+    <string name="moon_waxing_gibbous">Waxing gibbous</string>
+    <string name="moon_full">Full moon</string>
+    <string name="moon_waning_gibbous">Waning gibbous</string>
+    <string name="moon_last_quarter">Last quarter</string>
+    <string name="moon_waning_crescent">Waning crescent</string>
+    <string name="moon_summary">%1$s illuminated · age %2$s d</string>
+    <string name="moon_next_new">Next new moon</string>
+    <string name="moon_next_full">Next full moon</string>
+    <string name="moon_in_days">in %1$d d</string>
+    <string name="sun_section">Sun</string>
+    <string name="day_length">Daylight</string>
+    <string name="agps_clear">Clear assistance data</string>
+    <string name="capability_accumulated_delta">Accumulated delta range</string>
+    <string name="capability_msb">Coarse time (MSB)</string>
+    <string name="capability_low_power">Low power mode</string>
+    <string name="capability_satellite_pvt">Per-satellite PVT</string>
+    <string name="capability_scheduling">Scheduled fixes</string>
+    <string name="capability_geofencing">Geofencing</string>
+    <string name="capability_single_shot">Single-shot fix</string>
+    <string name="capability_blocklist">Satellite blocklist</string>
+    <string name="capability_corrections">Measurement corrections</string>
+    <string name="capability_signal_types">Supported signals</string>
+    <string name="language">Language</string>
+    <string name="language_system">Follow system</string>
+    <string name="position_title">Position</string>
+    <string name="position_format">Position format</string>
+    <string name="geodetic_datum">Datum</string>
+    <string name="datum_pinned_hint">This grid uses its own datum; the Datum setting is ignored.</string>
+    <string name="coord_copy_hint">Tap the icon to copy</string>
+    <string name="daynight_section">Day and night</string>
+    <string name="daynight_subsolar">Subsolar point</string>
+    <string name="daynight_here">Your position</string>
+    <string name="daynight_elevation">Solar elevation here</string>
+    <string name="daynight_map_description">World map with the sunlit and dark halves of Earth</string>
+    <string name="sky_mode_satellites">Satellites</string>
+    <string name="sky_mode_bodies">Celestial</string>
+    <string name="sky_body_tap_hint">Tap a body for details</string>
+    <string name="sky_bodies_need_location">Waiting for a location fix to compute the sky</string>
+    <string name="sky_aim_hint">Tilt the phone to move the ring onto a target</string>
+    <string name="sky_aim_locked">Aligned</string>
+    <string name="pointing_axis">Pointing source</string>
+    <string name="pointing_axis_camera">Camera side</string>
+    <string name="pointing_axis_camera_desc">The ring follows the back of the phone. Best when you are lying down or looking steeply up.</string>
+    <string name="pointing_axis_top">Top edge</string>
+    <string name="pointing_axis_top_desc">The ring follows the top edge of the phone. Handier when standing and looking at the screen.</string>
+    <string name="sky_below_horizon">Below horizon</string>
+    <string name="sky_magnitude">Magnitude</string>
+    <string name="sky_body_distance">Distance</string>
+    <string name="body_sun">Sun</string>
+    <string name="body_moon">Moon</string>
+    <string name="body_mercury">Mercury</string>
+    <string name="body_venus">Venus</string>
+    <string name="body_mars">Mars</string>
+    <string name="body_jupiter">Jupiter</string>
+    <string name="body_saturn">Saturn</string>
+    <string name="body_uranus">Uranus</string>
+    <string name="body_neptune">Neptune</string>
+    <string name="light_golden">Golden hour</string>
+    <string name="light_civil">Civil</string>
+    <string name="light_nautical">Nautical</string>
+    <string name="light_astronomical">Astronomical</string>
+    <string name="light_blue">Blue hour</string>
+    <string name="units_aviation">Aviation</string>
+</resources>

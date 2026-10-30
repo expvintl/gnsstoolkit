@@ -1,0 +1,266 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">GNSS 工具箱</string>
+
+    <!-- 导航 -->
+    <string name="nav_sky">天空</string>
+    <string name="nav_signal">信号</string>
+    <string name="nav_location">位置</string>
+    <string name="nav_compass">罗盘</string>
+    <string name="nav_status">状态</string>
+    <string name="nav_settings">设置</string>
+    <string name="nav_log">数据记录</string>
+
+    <!-- 通用 -->
+    <string name="satellites_used">参与定位</string>
+    <string name="satellites_visible">可见</string>
+    <string name="latitude">纬度</string>
+    <string name="longitude">经度</string>
+    <string name="altitude">海拔</string>
+    <string name="speed_toggle">切换速度单位</string>
+    <string name="speed">速度</string>
+    <string name="heading">航向</string>
+    <string name="accuracy_horizontal">水平精度</string>
+    <string name="accuracy_vertical">垂直精度</string>
+    <string name="time_utc">UTC 时间</string>
+    <string name="time_local">本地时间</string>
+    <string name="timezone">时区</string>
+    <string name="sunrise">日出</string>
+    <string name="sunset">日落</string>
+    <string name="no_fix">未定位</string>
+    <string name="acquiring">正在搜索卫星…</string>
+    <string name="copy">复制</string>
+    <string name="copied">已复制到剪贴板</string>
+    <string name="share">分享</string>
+    <string name="delete">删除</string>
+    <string name="close">关闭</string>
+    <string name="cancel">取消</string>
+    <string name="unknown">未知</string>
+    <string name="not_available">不可用</string>
+
+    <!-- 权限 -->
+    <string name="permission_title">需要定位权限</string>
+    <string name="permission_body">GNSS 工具箱需要读取设备 GNSS 芯片的卫星与定位数据。所有数据仅在本机使用，不会上传。</string>
+    <string name="permission_button">授予权限</string>
+    <string name="permission_settings">打开系统设置</string>
+    <string name="permission_denied">定位权限被拒绝。请在系统设置中开启后重试。</string>
+
+    <!-- 天空 -->
+    <string name="sky_caption">按方位角与仰角绘制的卫星分布</string>
+    <string name="sky_north">北</string>
+    <string name="sky_east">东</string>
+    <string name="sky_south">南</string>
+    <string name="sky_west">西</string>
+    <string name="sky_elevation_30">30°</string>
+    <string name="sky_elevation_60">60°</string>
+    <string name="sky_tap_hint">点击卫星查看详情</string>
+    <string name="satellite_details">卫星详情</string>
+    <string name="satellite_azimuth">方位角</string>
+    <string name="satellite_elevation">仰角</string>
+    <string name="satellite_cn0">载噪比</string>
+    <string name="satellite_band">频段</string>
+    <string name="satellite_used">参与定位</string>
+    <string name="satellite_ephemeris">星历</string>
+    <string name="satellite_almanac">历书</string>
+    <string name="satellite_baseline">基线信号强度</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+
+    <!-- 信号 -->
+    <string name="signal_caption">按载噪比从强到弱排列</string>
+    <string name="signal_average">平均</string>
+    <string name="signal_strongest">最强</string>
+    <string name="signal_elevation_short">仰角</string>
+    <string name="signal_empty">正在等待卫星数据…</string>
+
+    <!-- 位置 -->
+    <string name="location_caption">位置、运动与时间</string>
+    <string name="dop_title">精度衰减因子</string>
+    <string name="dop_hdop">水平 HDOP</string>
+    <string name="dop_pdop">位置 PDOP</string>
+    <string name="dop_vdop">垂直 VDOP</string>
+    <string name="dop_hint">数值越小精度越高</string>
+    <string name="ttff">首次定位耗时</string>
+    <string name="fix_time">定位时间</string>
+    <string name="provider">定位来源</string>
+    <string name="quality_excellent">极佳</string>
+    <string name="quality_good">良好</string>
+    <string name="quality_fair">一般</string>
+    <string name="quality_poor">较差</string>
+    <string name="quality_bad">很差</string>
+    <string name="location_empty">正在等待定位结果，请移至开阔天空下。</string>
+    <string name="altitude_msl">海拔（海平面）</string>
+
+    <!-- 罗盘 -->
+    <string name="compass_caption">由磁力计计算出的设备朝向</string>
+    <string name="compass_magnetic">磁北</string>
+    <string name="compass_true">真北</string>
+    <string name="compass_gps_course">GPS 航向</string>
+    <string name="compass_declination">磁偏角</string>
+    <string name="compass_sensor_accuracy">传感器精度</string>
+    <string name="compass_accuracy_high">高</string>
+    <string name="compass_accuracy_medium">中</string>
+    <string name="compass_accuracy_low">低</string>
+    <string name="compass_accuracy_unreliable">不可靠</string>
+    <string name="compass_unavailable">此设备没有磁力计</string>
+    <string name="compass_calibration_hint">以"8"字形晃动设备可提高精度</string>
+
+    <!-- 状态 -->
+    <string name="status_caption">引擎、设备能力与记录</string>
+    <string name="capabilities">设备能力</string>
+    <string name="capability_dual_frequency">双频</string>
+    <string name="capability_nav_messages">导航电文</string>
+    <string name="capability_antenna">天线信息</string>
+    <string name="capability_measurements">原始观测值</string>
+    <string name="capabilities_unavailable">需要 Android 12 及以上</string>
+    <string name="agps">辅助定位（AGPS）</string>
+    <string name="agps_description">请求系统下载新的辅助数据。首次定位过慢时可以尝试。</string>
+    <string name="agps_request">请求辅助数据</string>
+    <string name="agps_sent">已发送辅助数据请求</string>
+    <string name="engine_status">引擎</string>
+    <string name="engine_running">跟踪中</string>
+    <string name="engine_stopped">已停止</string>
+    <string name="engine_ttff">首次定位耗时</string>
+    <string name="engine_nmea">NMEA 语句</string>
+    <string name="log_section">数据记录</string>
+
+    <!-- 记录 -->
+    <string name="log_title">数据记录</string>
+    <string name="log_caption">已记录的会话</string>
+    <string name="log_start">开始记录</string>
+    <string name="log_stop">停止记录</string>
+    <string name="log_recording">正在记录…</string>
+    <string name="log_idle_title">轨迹记录</string>
+    <string name="log_points">%1$d 个轨迹点</string>
+    <string name="log_format">轨迹格式</string>
+    <string name="log_format_gpx">GPX</string>
+    <string name="log_format_kml">KML</string>
+    <string name="log_format_csv">CSV</string>
+    <string name="log_format_gpx_desc">标准 GPS 轨迹交换格式，可导入 Strava、OsmAnd、Garmin Connect、Google Earth 等主流地图与运动应用。</string>
+    <string name="log_format_kml_desc">通用 OGC KML，轨迹以 LineString 表示，任何 KML 查看器都能打开；需要逐点时间戳请用 GPX。</string>
+    <string name="log_format_csv_desc">位置、速度、DOP 与卫星数量的纯文本表格，便于用表格软件分析。</string>
+    <string name="log_points_distance">%1$d 个轨迹点 · %2$s</string>
+    <string name="track_sampling">采样频率</string>
+    <string name="track_sampling_adaptive">自适应</string>
+    <string name="track_sampling_adaptive_desc">静止时不记点，移动时按位移均匀布点。文件最小，推荐。</string>
+    <string name="track_sampling_1s">1 秒</string>
+    <string name="track_sampling_1s_desc">每秒一个点。细节最多、文件最大，适合短时测试。</string>
+    <string name="track_sampling_5s">5 秒</string>
+    <string name="track_sampling_5s_desc">每 5 秒一个点。步行、骑行时的平衡选择。</string>
+    <string name="track_sampling_10s">10 秒</string>
+    <string name="track_sampling_10s_desc">每 10 秒一个点。长途出行时轨迹更紧凑。</string>
+    <string name="track_sampling_30s">30 秒</string>
+    <string name="track_sampling_30s_desc">每 30 秒一个点。固定频率里最省空间，适合整天记录。</string>
+    <string name="log_empty">暂无记录</string>
+    <string name="log_lines">行</string>
+    <string name="log_delete_title">删除记录？</string>
+    <string name="log_delete_body">文件将从本机删除。</string>
+    <string name="log_storage_hint">文件保存在应用内部存储的 logs/ 目录</string>
+
+    <!-- 设置 -->
+    <string name="appearance">外观</string>
+    <string name="theme">主题</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="dynamic_color">动态取色</string>
+    <string name="dynamic_color_summary">从壁纸提取配色（Android 12+）</string>
+    <string name="amoled">纯黑背景</string>
+    <string name="amoled_summary">深色主题下使用纯黑表面</string>
+    <string name="units">单位</string>
+    <string name="units_metric">公制</string>
+    <string name="units_imperial">英制</string>
+    <string name="units_nautical">航海</string>
+    <string name="constellations_title">星座</string>
+    <string name="constellations_summary">隐藏后不在天空视图与信号列表中显示。</string>
+    <string name="display">显示</string>
+    <string name="keep_screen_on">保持屏幕常亮</string>
+    <string name="keep_screen_on_summary">跟踪时避免屏幕自动熄灭</string>
+    <string name="about">关于</string>
+    <string name="version">版本</string>
+    <string name="about_body">一个现代的 Material 3 GNSS 工具箱：天空视图、信号强度、位置、罗盘与数据记录。所有计算均在本机完成。</string>
+    <string name="data_privacy">无统计、无追踪；除可选的辅助数据外不访问网络。</string>
+
+    <!-- 单位 -->
+    <string name="unit_meter">m</string>
+    <string name="unit_kilometer">km</string>
+    <string name="unit_foot">ft</string>
+    <string name="unit_mile">mi</string>
+    <string name="unit_nautical_mile">nmi</string>
+    <string name="unit_kmh">km/h</string>
+    <string name="unit_mph">mph</string>
+    <string name="unit_knot">kn</string>
+    <string name="unit_mps">m/s</string>
+    <string name="unit_dbhz">dB-Hz</string>
+    <string name="unit_degree">°</string>
+    <string name="unit_mhz">MHz</string>
+
+    <!-- 演示 -->
+    <string name="moon_section">月球</string>
+    <string name="moon_new">新月</string>
+    <string name="moon_waxing_crescent">娥眉月</string>
+    <string name="moon_first_quarter">上弦月</string>
+    <string name="moon_waxing_gibbous">盈凸月</string>
+    <string name="moon_full">满月</string>
+    <string name="moon_waning_gibbous">亏凸月</string>
+    <string name="moon_last_quarter">下弦月</string>
+    <string name="moon_waning_crescent">残月</string>
+    <string name="moon_summary">照明 %1$s · 月龄 %2$s 天</string>
+    <string name="moon_next_new">下次新月</string>
+    <string name="moon_next_full">下次满月</string>
+    <string name="moon_in_days">%1$d 天后</string>
+    <string name="sun_section">太阳</string>
+    <string name="day_length">昼长</string>
+    <string name="agps_clear">清除辅助数据</string>
+    <string name="capability_accumulated_delta">累积变化率</string>
+    <string name="capability_msb">粗时间 (MSB)</string>
+    <string name="capability_low_power">低功耗模式</string>
+    <string name="capability_satellite_pvt">单星 PVT</string>
+    <string name="capability_scheduling">定时定位</string>
+    <string name="capability_geofencing">地理围栏</string>
+    <string name="capability_single_shot">单次定位</string>
+    <string name="capability_blocklist">卫星黑名单</string>
+    <string name="capability_corrections">测量值改正</string>
+    <string name="capability_signal_types">支持的信号</string>
+    <string name="language">语言</string>
+    <string name="language_system">跟随系统</string>
+    <string name="position_title">位置</string>
+    <string name="position_format">坐标格式</string>
+    <string name="geodetic_datum">大地基准</string>
+    <string name="datum_pinned_hint">该网格使用自身配套的基准，基准设置在此格式下不生效。</string>
+    <string name="coord_copy_hint">点右侧图标复制</string>
+    <string name="daynight_section">昼夜分界</string>
+    <string name="daynight_subsolar">太阳直射点</string>
+    <string name="daynight_here">当前位置</string>
+    <string name="daynight_elevation">本地太阳高度角</string>
+    <string name="daynight_map_description">显示地球昼夜半球的世界地图</string>
+    <string name="sky_mode_satellites">卫星</string>
+    <string name="sky_mode_bodies">天体</string>
+    <string name="sky_body_tap_hint">点按天体查看细节</string>
+    <string name="sky_bodies_need_location">正在等待定位，定位后才能计算天体在天空中的位置</string>
+    <string name="sky_aim_hint">倾斜手机，把圆圈移到目标上</string>
+    <string name="sky_aim_locked">已对准</string>
+    <string name="pointing_axis">指向方式</string>
+    <string name="pointing_axis_camera">摄像头一侧</string>
+    <string name="pointing_axis_camera_desc">圆圈跟着手机背面走。躺着或大角度仰视时更顺手。</string>
+    <string name="pointing_axis_top">顶部边缘</string>
+    <string name="pointing_axis_top_desc">圆圈跟着手机顶边走。站着看屏幕时更自然。</string>
+    <string name="sky_below_horizon">地平线下</string>
+    <string name="sky_magnitude">星等</string>
+    <string name="sky_body_distance">距离</string>
+    <string name="body_sun">太阳</string>
+    <string name="body_moon">月亮</string>
+    <string name="body_mercury">水星</string>
+    <string name="body_venus">金星</string>
+    <string name="body_mars">火星</string>
+    <string name="body_jupiter">木星</string>
+    <string name="body_saturn">土星</string>
+    <string name="body_uranus">天王星</string>
+    <string name="body_neptune">海王星</string>
+    <string name="light_golden">黄金时刻</string>
+    <string name="light_civil">民用晨昏</string>
+    <string name="light_nautical">航海晨昏</string>
+    <string name="light_astronomical">天文晨昏</string>
+    <string name="light_blue">蓝调时刻</string>
+    <string name="units_aviation">航空</string>
+</resources>

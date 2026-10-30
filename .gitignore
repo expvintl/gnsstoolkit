@@ -1,0 +1,35 @@
+# Gradle / Android 构建产物
+.gradle/
+build/
+app/build/
+.kotlin/
+*.iml
+captures/
+.cxx/
+
+# 本机配置（含 SDK 路径，不进仓库）
+local.properties
+
+# 校验工具的生成物
+tools/**/bench.jar
+tools/**/bench-out.jsonl
+tools/**/bench-err.txt
+tools/**/__pycache__/
+tools/track-validate/schemas/
+tools/track-validate/*.xsd
+tools/**/sample.gpx
+tools/**/sample.kml
+tools/**/sample_empty.kml
+
+# 发布签名材料（本仓库不提交正式密钥）
+*.jks
+*.keystore
+keystore.properties
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+
+# 临时 GitHub 令牌（不入库）
+.gh_token
